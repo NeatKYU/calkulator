@@ -19,6 +19,30 @@ class CalculationScreen extends StatelessWidget {
               width: double.infinity,
               height: _size.height * 0.22,
               color: Colors.amberAccent,
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      width: _size.width,
+                      height: 100,
+                      color: Colors.purple,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          // 계산된 값이 들어가야함
+                          Text(
+                            '1234',
+                            style: Theme.of(context).textTheme.bodyLarge
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
               width: double.infinity,
@@ -31,12 +55,6 @@ class CalculationScreen extends StatelessWidget {
                 crossAxisSpacing: 2,
                 crossAxisCount: 4,
                 children: _pad(),
-                // children: [
-                //   NumberButtonWidget(
-                //     calNumber: '1',
-                //     fillColor: Colors.black,
-                //   ),
-                // ],
               ),
             ),
           ],

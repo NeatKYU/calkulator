@@ -13,19 +13,24 @@ class NumberButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8),
-      child: Container(
-        decoration: BoxDecoration(
-          color: fillColor,
-          borderRadius: BorderRadius.circular(50),
-        ),
-        width: double.infinity,
-        height: double.infinity,
-        child: Center(
-          child: Text(
-            calNumber,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
+      child: InkWell(
+        onTap: () {
+          print('tap $calNumber');
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            color: fillColor,
+            borderRadius: BorderRadius.circular(50),
+          ),
+          width: double.infinity,
+          height: double.infinity,
+          child: Center(
+            child: Text(
+              calNumber,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+              ),
             ),
           ),
         ),

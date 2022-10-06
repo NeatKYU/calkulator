@@ -15,6 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 60),
+          bodyMedium: TextStyle(fontSize: 35),
+          bodySmall: TextStyle(fontSize: 20),
+        )
       ),
       home: const CalculationScreen(),
     );
