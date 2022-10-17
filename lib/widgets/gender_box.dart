@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class GenderBox extends StatelessWidget {
   final Icon icon;
   final Text label;
-  const GenderBox({super.key, required this.icon, required this.label});
+  final VoidCallback setGender;
+
+  const GenderBox({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.setGender,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +20,7 @@ class GenderBox extends StatelessWidget {
       onTap: () {
         // TODO gender change
         print('선택!');
+        setGender();
       },
       child: Padding(
         padding: const EdgeInsets.all(8),
