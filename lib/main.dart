@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primaryColor: Color(0xff58C9B9),
+            scaffoldBackgroundColor: Color(0xffE0E3DA),
+            fontFamily: 'Mabinogi_Classic',
+            // primarySwatch: MaterialColor(0xffA593E0, ),
             outlinedButtonTheme: OutlinedButtonThemeData(
               style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.blueGrey,
