@@ -1,9 +1,8 @@
-import 'package:calkulator/screens/result_screen.dart';
+import 'package:calkulator/widgets/calculation_button.dart';
 import 'package:calkulator/widgets/gauge_box.dart';
 import 'package:calkulator/widgets/gender_box.dart';
 import 'package:calkulator/widgets/number_box.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class CalculationScreen extends StatelessWidget {
   const CalculationScreen({super.key});
@@ -14,38 +13,37 @@ class CalculationScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('BMI Calculator'),
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              GenderBox(
-                icon: Icon(Icons.male_outlined, size: 100),
-                label: 'male',
-              ),
-              GenderBox(
-                icon: Icon(Icons.female_outlined, size: 100),
-                label: 'female',
-              ),
-            ],
-          ),
-          GaugeBox(label: Text('신장(cm)'), limitNumber: 200),
-          SizedBox(
-            height: 10,
-          ),
-          NumberBox(label: 'age', limitNumber: 100),
-          SizedBox(
-            height: 10,
-          ),
-          NumberBox(label: 'weight', limitNumber: 200),
-          OutlinedButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return ResultScreen();
-              }));
-            },
-            child: Text('계산!'),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 8, right: 8),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                GenderBox(
+                  icon: Icon(Icons.male_outlined, size: 100),
+                  label: 'male',
+                ),
+                GenderBox(
+                  icon: Icon(Icons.female_outlined, size: 100),
+                  label: 'female',
+                ),
+              ],
+            ),
+            GaugeBox(label: Text('신장(cm)'), limitNumber: 200),
+            SizedBox(
+              height: 10,
+            ),
+            NumberBox(label: 'age', limitNumber: 100),
+            SizedBox(
+              height: 10,
+            ),
+            NumberBox(label: 'weight', limitNumber: 200),
+            SizedBox(
+              height: 10,
+            ),
+            CalculationButton(label: 'calculate!!'),
+          ],
+        ),
       ),
     );
   }

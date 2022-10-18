@@ -25,8 +25,8 @@ class GenderBox extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Container(
-          width: _size.width / 2 - 16,
-          height: _size.width / 2 - 16,
+          width: _size.width / 2 - 24,
+          height: _size.width / 2 - 24,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             color: Colors.blueAccent,

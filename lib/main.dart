@@ -21,6 +21,14 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
             primarySwatch: Colors.blue,
+            outlinedButtonTheme: OutlinedButtonThemeData(
+              style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                  foregroundColor: Colors.black,
+                  textStyle: TextStyle(
+                    fontSize: 20,
+                  )),
+            ),
             textTheme: const TextTheme(
               bodyLarge: TextStyle(fontSize: 60),
               bodyMedium: TextStyle(fontSize: 35),

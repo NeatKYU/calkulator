@@ -23,7 +23,7 @@ class _NumberBoxState extends State<NumberBox> {
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
     return Container(
-      width: _size.width - 16,
+      width: _size.width,
       height: _size.width / 3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
