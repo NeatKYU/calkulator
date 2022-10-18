@@ -1,5 +1,6 @@
+import 'package:calkulator/providers/people_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
 
 class GaugeBox extends StatefulWidget {
   final Text label;
@@ -55,18 +56,12 @@ class _GaugeBoxState extends State<GaugeBox> {
                 setState(() {
                   _num = value;
                 });
-                setNumber(value);
+                context.read<PeopleProvider>().setTaller(value);
               },
             ),
           ),
         ],
       ),
     );
-  }
-
-  void setNumber(double value) async {
-    SharedPreferences.setMockInitialValues({});
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setDouble('tall', value);
   }
 }

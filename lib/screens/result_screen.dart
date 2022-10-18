@@ -1,4 +1,6 @@
+import 'package:calkulator/providers/people_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key});
@@ -10,8 +12,22 @@ class ResultScreen extends StatelessWidget {
         title: Text('result screen!'),
       ),
       body: Center(
-        child: Text(''),
-      )
+        child: Column(
+          children: [
+            Text(context.read<PeopleProvider>().gender!),
+            Text(context.read<PeopleProvider>().taller!.toString()),
+            Text(context.read<PeopleProvider>().age!.toString()),
+            Text(context.read<PeopleProvider>().weight!.toString()),
+          ],
+        ),
+      ),
     );
   }
+
+  // String getValue() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   final String? gender = prefs.getString('gender')!;
+
+  //   return gender!;
+  // }
 }

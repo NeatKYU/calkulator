@@ -19,29 +19,24 @@ class CalculationScreen extends StatelessWidget {
           Row(
             children: [
               GenderBox(
-                  icon: Icon(Icons.male_outlined, size: 100),
-                  label: Text('male'),
-                  setGender: () {
-                    setGender('male');
-                  }),
+                icon: Icon(Icons.male_outlined, size: 100),
+                label: 'male',
+              ),
               GenderBox(
                 icon: Icon(Icons.female_outlined, size: 100),
-                label: Text('female'),
-                setGender: () {
-                  setGender('female');
-                },
+                label: 'female',
               ),
             ],
           ),
-          GaugeBox(label: Text('신장(cm)'), limitNumber: 100),
+          GaugeBox(label: Text('신장(cm)'), limitNumber: 200),
           SizedBox(
             height: 10,
           ),
-          NumberBox(label: Text('age'), limitNumber: 100),
+          NumberBox(label: 'age', limitNumber: 100),
           SizedBox(
             height: 10,
           ),
-          NumberBox(label: Text('weight'), limitNumber: 200),
+          NumberBox(label: 'weight', limitNumber: 200),
           OutlinedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -55,15 +50,9 @@ class CalculationScreen extends StatelessWidget {
     );
   }
 
-  void setGender(String gender) async {
-    SharedPreferences.setMockInitialValues({});
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('gender', gender);
-  }
-
   double calculate() {
     // TODO 계산식 ㄲ
-    
+
     return 0;
   }
 }

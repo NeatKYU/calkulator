@@ -1,8 +1,10 @@
+import 'package:calkulator/providers/people_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class NumberBox extends StatefulWidget {
-  final Text label;
+  final String label;
   final int limitNumber;
   const NumberBox({
     super.key,
@@ -36,7 +38,7 @@ class _NumberBoxState extends State<NumberBox> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(child: widget.label),
+                Center(child: Text(widget.label)),
                 Text('$_num'),
               ],
             ),
@@ -47,8 +49,13 @@ class _NumberBoxState extends State<NumberBox> {
               itemExtent: 50, // 아이템 height
               onSelectedItemChanged: (value) {
                 setState(() {
-                  _num = value+1;
+                  _num = value + 1;
                 });
+                if (widget.label == 'age') {
+                  context.read<PeopleProvider>().setAge(value + 1);
+                } else {
+                  context.read<PeopleProvider>().setWeight(value + 1);
+                }
               },
               children: List.generate(
                 widget.limitNumber,

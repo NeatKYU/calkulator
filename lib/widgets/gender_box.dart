@@ -1,16 +1,15 @@
+import 'package:calkulator/providers/people_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
 
 class GenderBox extends StatelessWidget {
   final Icon icon;
-  final Text label;
-  final VoidCallback setGender;
+  final String label;
 
   const GenderBox({
     super.key,
     required this.icon,
     required this.label,
-    required this.setGender,
   });
 
   @override
@@ -20,7 +19,8 @@ class GenderBox extends StatelessWidget {
       onTap: () {
         // TODO gender change
         print('선택!');
-        setGender();
+        // setGender();
+        context.read<PeopleProvider>().setGender(label);
       },
       child: Padding(
         padding: const EdgeInsets.all(8),
@@ -35,7 +35,7 @@ class GenderBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               icon,
-              label,
+              Text(label),
             ],
           ),
         ),
