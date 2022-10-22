@@ -26,7 +26,7 @@ class _GaugeBoxState extends State<GaugeBox> {
       height: _size.width / 3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.blueAccent,
+        color: Theme.of(context).primaryColor,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

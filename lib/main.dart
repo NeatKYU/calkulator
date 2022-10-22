@@ -26,10 +26,11 @@ class MyApp extends StatelessWidget {
             // primarySwatch: MaterialColor(0xffA593E0, ),
             outlinedButtonTheme: OutlinedButtonThemeData(
               style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+                  backgroundColor: Color(0xff9DC8C8),
                   foregroundColor: Colors.black,
                   textStyle: TextStyle(
                     fontSize: 20,
+                    fontFamily: 'Mabinogi_Classic',
                   )),
             ),
             textTheme: const TextTheme(

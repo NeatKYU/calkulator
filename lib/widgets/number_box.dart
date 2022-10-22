@@ -27,7 +27,7 @@ class _NumberBoxState extends State<NumberBox> {
       height: _size.width / 3,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.blueAccent,
+        color: Theme.of(context).primaryColor,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -22,22 +22,19 @@ class GenderBox extends StatelessWidget {
         // setGender();
         context.read<PeopleProvider>().setGender(label);
       },
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Container(
-          width: _size.width / 2 - 24,
-          height: _size.width / 2 - 24,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.blueAccent,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              icon,
-              Text(label),
-            ],
-          ),
+      child: Container(
+        width: _size.width / 2 - 16,
+        height: _size.width / 2 - 16,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Theme.of(context).primaryColor,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            icon,
+            Text(label),
+          ],
         ),
       ),
     );

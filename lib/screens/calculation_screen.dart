@@ -17,7 +17,11 @@ class CalculationScreen extends StatelessWidget {
         padding: const EdgeInsets.only(left: 8, right: 8),
         child: Column(
           children: [
+            SizedBox(
+              height: 10,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GenderBox(
                   icon: Icon(Icons.male_outlined, size: 100),
@@ -28,6 +32,9 @@ class CalculationScreen extends StatelessWidget {
                   label: 'female',
                 ),
               ],
+            ),
+            SizedBox(
+              height: 10,
             ),
             GaugeBox(label: Text('신장(cm)'), limitNumber: 200),
             SizedBox(
