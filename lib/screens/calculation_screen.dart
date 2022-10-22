@@ -54,10 +54,4 @@ class CalculationScreen extends StatelessWidget {
       ),
     );
   }
-
-  double calculate() {
-    // TODO 계산식 ㄲ
-
-    return 0;
-  }
 }

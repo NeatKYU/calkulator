@@ -18,16 +18,10 @@ class ResultScreen extends StatelessWidget {
             Text(context.read<PeopleProvider>().taller!.toString()),
             Text(context.read<PeopleProvider>().age!.toString()),
             Text(context.read<PeopleProvider>().weight!.toString()),
+            Text(context.read<PeopleProvider>().calculate().toStringAsFixed(1))
           ],
         ),
       ),
     );
   }
-
-  // String getValue() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final String? gender = prefs.getString('gender')!;
-
-  //   return gender!;
-  // }
 }

@@ -26,6 +26,12 @@ class PeopleProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  double calculate() {
+    // TODO 계산식 ㄲ
+    double bmi = _weight / ((_taller / 100) * (_taller / 100));
+    return bmi;
+  }
+
   String? get gender => _gender;
   double? get taller => _taller;
   double? get age => _age;
