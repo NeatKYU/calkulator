@@ -1,10 +1,9 @@
-import 'package:calkulator/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 
-class CalculationButton extends StatelessWidget {
+class ResetButton extends StatelessWidget {
   final String label;
 
-  const CalculationButton({
+  const ResetButton({
     super.key,
     required this.label,
   });
@@ -16,9 +15,7 @@ class CalculationButton extends StatelessWidget {
       height: 80,
       child: OutlinedButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return ResultScreen();
-          }));
+          Navigator.pop(context);
         },
         child: Text(label),
       ),

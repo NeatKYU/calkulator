@@ -39,7 +39,7 @@ class _GaugeBoxState extends State<GaugeBox> {
               children: [
                 Center(child: widget.label),
                 SizedBox(width: 20),
-                Text('${_num.toInt()}'),
+                Text('${_num.toInt()}cm'),
               ],
             ),
           ),

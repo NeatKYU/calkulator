@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
             primaryColor: Color(0xff58C9B9),
+            appBarTheme: AppBarTheme(
+              backgroundColor: Color(0xffE0E3DA),
+            ),
             scaffoldBackgroundColor: Color(0xffE0E3DA),
             fontFamily: 'Mabinogi_Classic',
             // primarySwatch: MaterialColor(0xffA593E0, ),
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
                   backgroundColor: Color(0xff9DC8C8),
                   foregroundColor: Colors.black,
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: 30,
                     fontFamily: 'Mabinogi_Classic',
                   )),
             ),

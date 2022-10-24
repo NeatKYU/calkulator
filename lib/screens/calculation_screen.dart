@@ -11,7 +11,13 @@ class CalculationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: Text(
+          'BMI 계산기',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 8, right: 8),
@@ -25,33 +31,30 @@ class CalculationScreen extends StatelessWidget {
               children: [
                 GenderBox(
                   icon: Icon(Icons.male_outlined, size: 100),
-                  label: 'male',
+                  label: '남자',
                 ),
                 GenderBox(
                   icon: Icon(Icons.female_outlined, size: 100),
-                  label: 'female',
+                  label: '여자',
                 ),
               ],
             ),
             SizedBox(
               height: 10,
             ),
-            GaugeBox(label: Text('신장(cm)'), limitNumber: 200),
+            GaugeBox(label: Text('신장'), limitNumber: 200),
             SizedBox(
               height: 10,
             ),
-            NumberBox(label: 'age', limitNumber: 100),
+            NumberBox(label: '나이', limitNumber: 100),
             SizedBox(
               height: 10,
             ),
-            NumberBox(label: 'weight', limitNumber: 200),
-            SizedBox(
-              height: 10,
-            ),
-            CalculationButton(label: 'calculate!!'),
+            NumberBox(label: '몸무게', limitNumber: 200),
           ],
         ),
       ),
+      bottomNavigationBar: CalculationButton(label: '나의 비만도는?'),
     );
   }
 }

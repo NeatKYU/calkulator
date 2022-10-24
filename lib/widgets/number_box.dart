@@ -17,7 +17,7 @@ class NumberBox extends StatefulWidget {
 }
 
 class _NumberBoxState extends State<NumberBox> {
-  int _num = 0;
+  int _num = 1;
 
   @override
   Widget build(BuildContext context) {
